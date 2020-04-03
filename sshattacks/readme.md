@@ -10,4 +10,4 @@ I decided it would be fun to see where they're coming from.
 
 [This is a map of the IP's that found my high port ssh server, and have tried in vain to log in.](https://dasmart.github.io/sshattacks)  I am using http://ipinfo.io for the lookups, and I followed the [Mapbox store locator tutorial](https://docs.mapbox.com/help/tutorials/building-a-store-locator/) for the maps.
 
-It's interesting to see the IP's from China and Moscow. It makes me wonder what they are up to. I suspect they'd like to have US based locations to signup for social media account, and stage disinformation attacks. Ugg. 
+It's interesting to see the IP's from China and Moscow. It makes me wonder what they are up to. I suspect they'd like to have US based locations to signup for social media accounts, and stage disinformation attacks. Ugg. 
