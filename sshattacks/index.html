@@ -3,9 +3,9 @@
 <head>
 	<meta charset='utf-8' />
 	<title>IP's that attacked my SSH Server</title>
-	<meta name='robots' content='noindex, nofollow'>
-	<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet'>
+	<meta name='robots' content='noindex,  nofollow'>
+	<meta name='viewport' content='initial-scale=1, maximum-scale=1, user-scalable=no' />
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400, 700' rel='stylesheet'>
 	<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js'>
 	</script>
 	<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css' rel='stylesheet' />
@@ -13,15 +13,15 @@
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-656577-22">
 	</script>
 	<script>
-		window.dataLayer = window.dataLayer || [];
+		window.dataLayer = window.dataLayer || [  ];
 		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
+		gtag('js',  new Date());
 		
-		gtag('config', 'UA-656577-22');
+		gtag('config',  'UA-656577-22');
 	</script>
 	<style>		body {
 		  color:#B41313;
-		  font:400 15px/22px 'Source Sans Pro', 'Helvetica Neue', Sans-serif;
+		  font:400 15px/22px 'Source Sans Pro',  'Helvetica Neue',  Sans-serif;
 		  margin:0;
 		  padding:0;
 		  -webkit-font-smoothing:antialiased;
@@ -39,7 +39,7 @@
 		  height:100%;
 		  top:0;left:0;
 		  overflow:hidden;
-		  border-right:1px solid rgba(0,0,0,0.25);
+		  border-right:1px solid rgba(0, 0, 0, 0.25);
 		}
 		.pad2 {
 		  padding:20px;
@@ -100,7 +100,7 @@
 		}
 		
 		.listings .item .title small { font-weight:400; }
-		.listings .item.active .title,
+		.listings .item.active .title, 
 		.listings .item .title:hover { color:#961C20; }
 		.listings .item.active {
 		  background-color:#f8f8f8;
@@ -109,7 +109,7 @@
 		  width:3px;
 		  height:3px;
 		  border-left:0;
-		  background:rgba(0,0,0,0.1);
+		  background:rgba(0, 0, 0, 0.1);
 		}
 		::-webkit-scrollbar-track {
 		  background:none;
@@ -125,7 +125,7 @@
 		  height: 32px;
 		  width: 32px;
 		  background-image: url(marker32.png);
-		  background-color: rgba(0, 0, 0, 0);
+		  background-color: rgba(0,  0,  0,  0);
 		}
 		
 		.clearfix { display:block; }
@@ -146,7 +146,7 @@
 		  display:none;
 		}
 		.mapboxgl-popup-content {
-		  font:400 15px/22px 'Source Sans Pro', 'Helvetica Neue', Sans-serif;
+		  font:400 15px/22px 'Source Sans Pro',  'Helvetica Neue',  Sans-serif;
 		  padding:0;
 		  width:180px;
 		}
@@ -216,369 +216,47 @@
 	 * Add the map to the page
 	*/
 	var map = new mapboxgl.Map({
-	  container: 'map',
-	  style: 'mapbox://styles/mapbox/light-v10',
-	  center: [-77.034084142948, 38.909671288923],
-	  zoom: 0,
+	  container: 'map', 
+	  style: 'mapbox://styles/mapbox/light-v10', 
+	  center: [ -77.034084142948,  38.909671288923 ], 
+	  zoom: 0, 
 	  scrollZoom: true    
 	});
 	map.addControl(new mapboxgl.NavigationControl());
 	
 	var stores = {
-	  "type": "FeatureCollection",
-	  "features": [
-	    {
-	  "type": "Feature",
-	  "geometry": {
-	    "type": "Point",
-	    "coordinates": [
-	    10.4216,
-	    51.1658
-	    ]
-	  },
-	"properties": {
-	    "ip": "167.86.80.159",
-	    "hostname": "vmi245834.contaboserver.net",
-	    "city": "Oberdorla",
-	    "region": "Thuringia",
-	    "country": "DE",
-	    "org": "AS51167 Contabo GmbH",
-	    "postal": "99986",
-	    "timezone": "Europe/Berlin"
-	  }
-	  },
-	{
-	  "type": "Feature",
-	  "geometry": {
-	    "type": "Point",
-	    "coordinates": [
-	    37.615,
-	    55.752
-	    ]
-	  },
-	"properties": {
-	    "ip": "193.188.22.188",
-		"hostname": " ",
-	    "city": "Moscow",
-	    "region": "Moscow",
-	    "country": "RU",
-	    "postal": "117628",
-	    "timezone": "Europe/Moscow"
-	  }
-	  },
-	{
-	  "type": "Feature",
-	  "geometry": {
-	    "type": "Point",
-	    "coordinates": [
-	    116.3972,
-	    39.9075
-	    ]
-	  },
-	"properties": {
-	    "ip": "49.235.82.192",
-		"hostname": " ",
-	    "city": "Beijing",
-	    "region": "Beijing",
-	    "country": "CN",
-	    "org": "AS45090 Shenzhen Tencent Computer Systems Company Limited",
-	    "timezone": "Asia/Shanghai"
-	  }
-	  },
-	{
-	  "type": "Feature",
-	  "geometry": {
-	    "type": "Point",
-	    "coordinates": [
-	    116.3972,
-	    39.9075
-	    ]
-	  },
-	"properties": {
-	    "ip": "139.224.144.118",
-		"hostname": " ",
-	    "city": "Beijing",
-	    "region": "Beijing",
-	    "country": "CN",
-	    "org": "AS37963 Hangzhou Alibaba Advertising Co.,Ltd.",
-	    "timezone": "Asia/Shanghai"
-	  }
-	},
-	{
-	  "type": "Feature",
-	  "geometry": {
-	    "type": "Point",
-	    "coordinates": [
-	    -42.8819,
-	    -20.7539
-	    ]
-	  },
-	"properties": {
-	    "ip": "187.8.220.34",
-	    "hostname": "187-8-220-34.customer.tdatabrasil.net.br",
-	    "city": "Viçosa",
-	    "region": "Minas Gerais",
-	    "country": "BR",
-	    "org": "AS10429 TELEFÔNICA BRASIL S.A",
-	    "postal": "36570-000",
-	    "timezone": "America/Sao_Paulo"
-	  }
-	  },
-	{
-	  "type": "Feature",
-	  "geometry": {
-	    "type": "Point",
-	    "coordinates": [37.615,55.752]
-	  },  
-	  "properties": {
-	    "ip": "193.188.22.229",
-		"hostname": " ",
-	    "city": "Moscow",
-	    "region": "Moscow",
-	    "country": "RU",
-	    "postal": "117628",
-	    "timezone": "Europe/Moscow"
-	  }
-	  },
-	{
-	  "type": "Feature",
-	  "geometry": {
-	    "type": "Point",
-	    "coordinates": [
-	    -76.1692,
-	    36.8512
-	    ]
-	  },
-	"properties": {
-	    "ip": "3.228.52.193",
-	    "hostname": "ec2-3-228-52-193.compute-1.amazonaws.com",
-	    "city": "Virginia Beach",
-	    "region": "Virginia",
-	    "country": "US",
-	    "org": "AS14618 Amazon.com, Inc.",
-	    "postal": "23465",
-	    "timezone": "America/New_York"
-	  }
-	  },
-	{
-	  "type": "Feature",
-	  "geometry": {
-	    "type": "Point",
-	    "coordinates": [
-	    108.9286,
-	    34.2583
-	    ]
-	  },
-	"properties": {
-	    "ip": "123.139.38.133",
-		"hostname": " ",
-	    "city": "Xi’an",
-	    "region": "Shaanxi",
-	    "country": "CN",
-	    "org": "AS4837 CHINA UNICOM China169 Backbone",
-	    "timezone": "Asia/Shanghai"
-	  }
-	},
-	{
-	  "type": "Feature",
-	  "geometry": {
-	    "type": "Point",
-	    "coordinates": [116.3972,39.9075]
-	  },
-	  "properties": {
-	    "ip": "58.87.98.18",
-		"hostname": " ",
-	    "city": "Beijing",
-	    "region": "Beijing",
-	    "country": "CN",
-	    "org": "AS45090 Shenzhen Tencent Computer Systems Company Limited",
-	    "timezone": "Asia/Shanghai"
-	  }
-	},
-	{
-	  "type": "Feature",
-	  "geometry": {
-	    "type": "Point",
-	    "coordinates": [
-	    3.1746,
-	    50.6942
-	    ]
-	  },
-	  "properties": {
-	    "ip": "5.135.178.87",
-	    "hostname": "ns3283773.ip-5-135-178.eu",
-	    "city": "Roubaix",
-	    "region": "Hauts-de-France",
-	    "country": "FR",
-	    "org": "AS16276 OVH SAS",
-	    "postal": "59100",
-	    "timezone": "Europe/Paris"
-	  }
-	},
-	{
-	  "type": "Feature",
-	  "geometry": {
-	    "type": "Point",
-	    "coordinates": [
-	    37.615,
-	    55.752
-	    ]
-	  },  
-	  "properties": {
-	    "ip": "195.210.184.11",
-		"hostname": " ",
-	    "city": "Moscow",
-	    "region": "Moscow",
-	    "country": "RU",
-	    "org": "AS8359 MTS PJSC",
-	    "postal": "117587",
-	    "timezone": "Europe/Moscow"
-	  }
-	  },
-	{
-	  "type": "Feature",
-	  "geometry": {
-	    "type": "Point",
-	    "coordinates": [
-	    7.7455,
-	    48.5839
-	    ]
-	  },  
-	  "properties": {
-	    "ip": "185.202.1.164",
-		"hostname": " ",
-	    "city": "Strasbourg",
-	    "region": "Grand Est",
-	    "country": "FR",
-	    "org": "AS57043 HOSTKEY B.V.",
-	    "postal": "67000",
-	    "timezone": "Europe/Paris"
-	  }
-	  },
-	{
-	  "type": "Feature",
-	  "geometry": {
-	    "type": "Point",
-	    "coordinates": [
-		30.4766,
-		59.7513
-		]
-	  },  
-	  "properties": {
-	  "ip": "45.141.87.2",
-	  "hostname": " ",
-	  "city": "Tyarlevo",
-	  "region": "St.-Petersburg",
-	  "country": "RU",
-	  "loc": "59.7513,30.4766",
-	  "org": "AS56971 IT Outsourcing LLC",
-	  "postal": "196084",
-	  "timezone": "Europe/Moscow"
-	  }
-	  },
-	{
-	  "type": "Feature",
-	  "geometry": {
-	    "type": "Point",
-	    "coordinates": [
-		4.8607,
-		52.3455
-		]
-	  },  
-	  "properties": {
-	  "ip": "94.102.49.193",
-	  "hostname": "cloud.census.shodan.io",
-	  "city": "Amsterdam",
-	  "region": "North Holland",
-	  "country": "NL",
-	  "loc": "52.3455,4.8607",
-	  "org": "AS202425 IP Volume inc",
-	  "postal": "1076",
-	  "timezone": "Europe/Amsterdam"
-	}
-	  },
-	{
-	  "type": "Feature",
-	  "geometry": {
-	    "type": "Point",
-	    "coordinates": [
-		116.3972,
-		39.9075
-		]
-	  },  
-	  "properties": {
-	  "ip": "223.71.167.164",
-	  "hostname": " ",
-	  "city": "Beijing",
-	  "region": "Beijing",
-	  "country": "CN",
-	  "loc": "39.9075,116.3972",
-	  "org": "AS56048 China Mobile Communicaitons Corporation",
-	  "timezone": "Asia/Shanghai"
-	}
-	  },
-	{
-	  "type": "Feature",
-	  "geometry": {
-	    "type": "Point",
-	    "coordinates": [
-		-74.0060,
-		40.7143
-		]
-	  },
-	 "properties": {
-	  "ip": "76.164.234.122",
-		"hostname": " ",
-	  "city": "New York City",
-	  "region": "New York",
-	  "country": "US",
-	  "loc": "40.7143,-74.0060",
-	  "org": "AS53340 VegasNAP, LLC",
-	  "postal": "10004",
-	  "timezone": "America/New_York"
-	}
-	},
-	{
-	  "type": "Feature",
-	  "geometry": {
-	    "type": "Point",
-	    "coordinates": [
-		26.1063,
-		44.4323
-		]
-	  },  
-	  "properties": {
-	  "ip": "83.97.20.49",
-	  "hostname": "49.20.97.83.ro.ovo.sc",
-	  "city": "Bucharest",
-	  "region": "Bucureşti",
-	  "country": "RO",
-	  "loc": "44.4323,26.1063",
-	  "org": "AS9009 M247 Ltd",
-	  "postal": "020011",
-	  "timezone": "Europe/Bucharest"
-	}},
-	{
-	  "type": "Feature",
-	  "geometry": {
-	    "type": "Point",
-	    "coordinates": [
-		3.1746,
-		50.6942
-		]
-	  },  
-	  "properties": {
-	  "ip": "51.38.137.252",
-	  "hostname": "busyseeker.com",
-	  "city": "Roubaix",
-	  "region": "Hauts-de-France",
-	  "country": "FR",
-	  "loc": "50.6942,3.1746",
-	  "org": "AS16276 OVH SAS",
-	  "postal": "59051 CEDEX 1",
-	  "timezone": "Europe/Paris"
-	}}
-	  ]
+	  "type":  "FeatureCollection", 
+	  "features":
+	[
+{"type":"Feature","geometry":{"type":"Point","coordinates": [-117.1392,32.7973]},"properties":{"ip":"71.6.199.23","hostname":"einstein.census.shodan.io","city":"San Diego","region":"California","country":"US","loc":"32.7973,-117.1392","org":"AS10439 CariNet,Inc.","postal":"92123","timezone":"America/Los_Angeles"}},
+{"type":"Feature","geometry":{"type":"Point","coordinates": [-117.6981,33.4670]},"properties":{"ip":"144.217.50.88","hostname":"ip88.ip-144-217-50.net","city":"Dana Point","region":"California","country":"US","loc":"33.4670,-117.6981","org":"AS16276 OVH SAS","postal":"92629","timezone":"America/Los_Angeles"}},
+{"type":"Feature","geometry":{"type":"Point","coordinates": [-99.6733,19.2660]},"properties":{"ip":"148.215.18.103","hostname":"scfi.uaemex.mx","city":"San Buenaventura","region":"México","country":"MX","loc":"19.2660,-99.6733","org":"AS28526 Universidad Autonoma del Estado de Mexico","postal":"50110","timezone":"America/Mexico_City"}},
+{"type":"Feature","geometry":{"type":"Point","coordinates": [-42.8819,-20.7539]},"properties":{"ip":"187.8.220.34","hostname":"187-8-220-34.customer.tdatabrasil.net.br","city":"Viçosa","region":"Minas Gerais","country":"BR","org":"AS10429 TELEFÔNICA BRASIL S.A","postal":"36570-000","timezone":"America/Sao_Paulo"}},
+{"type":"Feature","geometry":{"type":"Point","coordinates": [-74.0060,40.7143]},"properties":{"ip":"76.164.234.122","hostname":" ","city":"New York City","region":"New York","country":"US","loc":"40.7143,-74.0060","org":"AS53340 VegasNAP,LLC","postal":"10004","timezone":"America/New_York"}},
+{"type":"Feature","geometry":{"type":"Point","coordinates": [-76.1692,36.8512]},"properties":{"ip":"3.228.52.193","hostname":"ec2-3-228-52-193.compute-1.amazonaws.com","city":"Virginia Beach","region":"Virginia","country":"US","loc":"36.8512,-76.1692","org":"AS14618 Amazon.com,Inc.","postal":"23465","timezone":"America/New_York"}},
+{"type":"Feature","geometry":{"type":"Point","coordinates": [10.4216,51.1658]},"properties":{"ip":"167.86.80.159","hostname":"vmi245834.contaboserver.net","city":"Oberdorla","region":"Thuringia","country":"DE","org":"AS51167 Contabo GmbH","postal":"99986","timezone":"Europe/Berlin"}},
+{"type":"Feature","geometry":{"type":"Point","coordinates": [100.1845,13.8013]},"properties":{"ip":"118.172.227.224","hostname":"node-190g.pool-118-172.dynamic.totinternet.net","city":"Nakhon Chai Si","region":"Nakhon Pathom","country":"TH","loc":"13.8013,100.1845","org":"AS23969 TOT Public Company Limited","postal":"73000","timezone":"Asia/Bangkok"}},
+{"type":"Feature","geometry":{"type":"Point","coordinates": [108.9286,34.2583]},"properties":{"ip":"123.139.38.133","hostname":" ","city":"Xi’an","region":"Shaanxi","country":"CN","org":"AS4837 CHINA UNICOM China169 Backbone","timezone":"Asia/Shanghai"}},
+{"type":"Feature","geometry":{"type":"Point","coordinates": [116.3972,39.9075]},"properties":{"ip":"139.224.144.118","hostname":" ","city":"Beijing","region":"Beijing","country":"CN","loc":"39.9075,116.3972","org":"AS37963 Hangzhou Alibaba Advertising Co.,Ltd.","timezone":"Asia/Shanghai"}},
+{"type":"Feature","geometry":{"type":"Point","coordinates": [116.3972,39.9075]},"properties":{"ip":"223.71.167.164","hostname":" ","city":"Beijing","region":"Beijing","country":"CN","loc":"39.9075,116.3972","org":"AS56048 China Mobile Communicaitons Corporation","timezone":"Asia/Shanghai"}},
+{"type":"Feature","geometry":{"type":"Point","coordinates": [116.3972,39.9075]},"properties":{"ip":"49.235.82.192","hostname":" ","city":"Beijing","region":"Beijing","country":"CN","org":"AS45090 Shenzhen Tencent Computer Systems Company Limited","timezone":"Asia/Shanghai"}},
+{"type":"Feature","geometry":{"type":"Point","coordinates": [116.3972,39.9075]},"properties":{"ip":"58.87.98.18","hostname":" ","city":"Beijing","region":"Beijing","country":"CN","org":"AS45090 Shenzhen Tencent Computer Systems Company Limited","timezone":"Asia/Shanghai"}},
+{"type":"Feature","geometry":{"type":"Point","coordinates": [120.6668,27.9994]},"properties":{"ip":"122.228.19.79","hostname":" ","city":"Wenzhou","region":"Zhejiang","country":"CN","loc":"27.9994,120.6668","org":"AS134771 WENZHOU,ZHEJIANG Province,P.R.China.","timezone":"Asia/Shanghai"}},
+{"type":"Feature","geometry":{"type":"Point","coordinates": [26.1063,44.4323]},"properties":{"ip":"83.97.20.49","hostname":"49.20.97.83.ro.ovo.sc","city":"Bucharest","region":"Bucureşti","country":"RO","loc":"44.4323,26.1063","org":"AS9009 M247 Ltd","postal":"020011","timezone":"Europe/Bucharest"}},
+{"type":"Feature","geometry":{"type":"Point","coordinates": [3.1746,50.6942]},"properties":{"ip":"5.135.178.87","hostname":"ns3283773.ip-5-135-178.eu","city":"Roubaix","region":"Hauts-de-France","country":"FR","org":"AS16276 OVH SAS","postal":"59100","timezone":"Europe/Paris"}},
+{"type":"Feature","geometry":{"type":"Point","coordinates": [3.1746,50.6942]},"properties":{"ip":"51.38.137.252","hostname":"busyseeker.com","city":"Roubaix","region":"Hauts-de-France","country":"FR","loc":"50.6942,3.1746","org":"AS16276 OVH SAS","postal":"59051 CEDEX 1","timezone":"Europe/Paris"}},
+{"type":"Feature","geometry":{"type":"Point","coordinates": [30.4766,59.7513]},"properties":{"ip":"45.141.87.2","hostname":" ","city":"Tyarlevo","region":"St.-Petersburg","country":"RU","loc":"59.7513,30.4766","org":"AS56971 IT Outsourcing LLC","postal":"196084","timezone":"Europe/Moscow"}},
+{"type":"Feature","geometry":{"type":"Point","coordinates": [37.615,55.752]},"properties":{"ip":"193.188.22.188","hostname":" ","city":"Moscow","region":"Moscow","country":"RU","postal":"117628","timezone":"Europe/Moscow"}},
+{"type":"Feature","geometry":{"type":"Point","coordinates": [37.615,55.752]},"properties":{"ip":"193.188.22.229","hostname":" ","city":"Moscow","region":"Moscow","country":"RU","postal":"117628","timezone":"Europe/Moscow"}},
+{"type":"Feature","geometry":{"type":"Point","coordinates": [37.615,55.752]},"properties":{"ip":"195.210.184.11","hostname":" ","city":"Moscow","region":"Moscow","country":"RU","org":"AS8359 MTS PJSC","postal":"117587","timezone":"Europe/Moscow"}},
+{"type":"Feature","geometry":{"type":"Point","coordinates": [4.8607,52.3455]},"properties":{"ip":"93.174.95.106","hostname":"battery.census.shodan.io","city":"Amsterdam","region":"North Holland","country":"NL","loc":"52.3455,4.8607","org":"AS202425 IP Volume inc","postal":"1076","timezone":"Europe/Amsterdam"}},
+{"type":"Feature","geometry":{"type":"Point","coordinates": [4.8607,52.3455]},"properties":{"ip":"94.102.49.193","hostname":"cloud.census.shodan.io","city":"Amsterdam","region":"North Holland","country":"NL","loc":"52.3455,4.8607","org":"AS202425 IP Volume inc","postal":"1076","timezone":"Europe/Amsterdam"}},
+{"type":"Feature","geometry":{"type":"Point","coordinates": [7.7455,48.5839]},"properties":{"ip":"185.202.1.164","hostname":" ","city":"Strasbourg","region":"Grand Est","country":"FR","loc":"48.5839,7.7455","org":"AS57043 HOSTKEY B.V.","postal":"67000","timezone":"Europe/Paris"}},
+{"type":"Feature","geometry":{"type":"Point","coordinates": [7.7455,48.5839]},"properties":{"ip":"185.202.1.223","hostname":" ","city":"Strasbourg","region":"Grand Est","country":"FR","loc":"48.5839,7.7455","org":"AS57043 HOSTKEY B.V.","postal":"67000","timezone":"Europe/Paris"}},
+{"type":"Feature","geometry":{"type":"Point","coordinates": [7.7455,48.5839]},"properties":{"ip":"185.202.1.240","hostname":" ","city":"Strasbourg","region":"Grand Est","country":"FR","loc":"48.5839,7.7455","org":"AS57043 HOSTKEY B.V.","postal":"67000","timezone":"Europe/Paris"}},
+{"type":"Feature","geometry":{"type":"Point","coordinates": [7.7455,48.5839]},"properties":{"ip":"185.202.2.226","hostname":" ","city":"Strasbourg","region":"Grand Est","country":"FR","loc":"48.5839,7.7455","org":"AS57043 HOSTKEY B.V.","postal":"67000","timezone":"Europe/Paris"}}
+
+	   ]
 	};
 	
 	/**
@@ -586,21 +264,21 @@
 	 * later to associate each point on the map with a listing
 	 * in the sidebar.
 	*/
-	stores.features.forEach(function(store, i){
+	stores.features.forEach(function(store,  i){
 	  store.properties.id = i;
 	});
 	
 	/**
 	 * Wait until the map loads to make changes to the map.
 	*/
-	map.on('load', function (e) {
+	map.on('load',  function (e) {
 	  /** 
-	   * This is where your '.addLayer()' used to be, instead
+	   * This is where your '.addLayer()' used to be,  instead
 	   * add only the source without styling a layer
 	  */
-	  map.addSource("places", {
-	    "type": "geojson",
-	    "data": stores
+	  map.addSource("places",  {
+	    "type":  "geojson", 
+	    "data":  stores
 	  });
 	
 	  /**
@@ -629,17 +307,17 @@
 	     * Create a marker using the div element
 	     * defined above and add it to the map.
 	    **/
-	    new mapboxgl.Marker(el, { offset: [0, -23] })
+	    new mapboxgl.Marker(el,  { offset: [ 0,  -23 ] })
 	      .setLngLat(marker.geometry.coordinates)
 	      .addTo(map);
 	
 	    /**
-	     * Listen to the element and when it is clicked, do three things:
+	     * Listen to the element and when it is clicked,  do three things:
 	     * 1. Fly to the point
 	     * 2. Close all other popups and display popup for clicked store
 	     * 3. Highlight listing in sidebar (and remove highlight for all other listings)
 	    **/
-	    el.addEventListener('click', function(e){
+	    el.addEventListener('click',  function(e){
 	      /* Fly to the point */
 	      flyToStore(marker);
 	      /* Close all other popups and display popup for clicked store */
@@ -647,8 +325,8 @@
 	      /* Highlight listing in sidebar */
 	      var activeItem = document.getElementsByClassName('active');
 	      e.stopPropagation();
-	      if (activeItem[0]) {
-	        activeItem[0].classList.remove('active');
+	      if (activeItem[ 0 ]) {
+	        activeItem[ 0 ].classList.remove('active');
 	      }
 	      var listing = document.getElementById('listing-' + marker.properties.id);
 	      listing.classList.add('active');
@@ -660,9 +338,9 @@
 	 * Add a listing for each store to the sidebar.
 	**/
 	function buildLocationList(data) {
-	  data.features.forEach(function(store, i){
+	  data.features.forEach(function(store,  i){
 	    /**
-	     * Create a shortcut for `store.properties`,
+	     * Create a shortcut for `store.properties`, 
 	     * which will be used several times below.
 	    **/
 	    var prop = store.properties;
@@ -690,23 +368,23 @@
 	    }
 	
 	    /**
-	     * Listen to the element and when it is clicked, do four things:
+	     * Listen to the element and when it is clicked,  do four things:
 	     * 1. Update the `currentFeature` to the store associated with the clicked link
 	     * 2. Fly to the point
 	     * 3. Close all other popups and display popup for clicked store
 	     * 4. Highlight listing in sidebar (and remove highlight for all other listings)
 	    **/
-	    link.addEventListener('click', function(e){
+	    link.addEventListener('click',  function(e){
 	      for (var i=0; i < data.features.length; i++) {
-	        if (this.id === "link-" + data.features[i].properties.id) {
-	          var clickedListing = data.features[i];
+	        if (this.id === "link-" + data.features[ i ].properties.id) {
+	          var clickedListing = data.features[ i ];
 	          flyToStore(clickedListing);
 	          createPopUp(clickedListing);
 	        }
 	      }
 	      var activeItem = document.getElementsByClassName('active');
-	      if (activeItem[0]) {
-	        activeItem[0].classList.remove('active');
+	      if (activeItem[ 0 ]) {
+	        activeItem[ 0 ].classList.remove('active');
 	      }
 	      this.parentNode.classList.add('active');
 	    });
@@ -719,7 +397,7 @@
 	**/
 	function flyToStore(currentFeature) {
 	  map.flyTo({
-	    center: currentFeature.geometry.coordinates,
+	    center: currentFeature.geometry.coordinates, 
 	    zoom: 9
 	  });
 	}
@@ -729,7 +407,7 @@
 	**/
 	function createPopUp(currentFeature) {
 	  var popUps = document.getElementsByClassName('mapboxgl-popup');
-	  if (popUps[0]) popUps[0].remove();
+	  if (popUps[ 0 ]) popUps[ 0 ].remove();
 	  var popup = new mapboxgl.Popup({closeOnClick: false})
 	    .setLngLat(currentFeature.geometry.coordinates)
 	    .setHTML('<h3>SSH Attackers</h3>' +
